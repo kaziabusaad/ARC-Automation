@@ -35,56 +35,56 @@ def admin(driver, url):
         print('Admin SignIn: Failed! 👎')
         print(f"Error from Admin SignIn: {e}")
 
-    # # Dashboard
-    # try:
-    #     # KPI List
-    #     # wait = WebDriverWait(driver, 20)
-    #     # element = wait.until(EC.visibility_of_element_located((By.ID, 'radix-:r0:-trigger-password')))
-    #     # element.click()
-    #     driver.find_element(By.ID, 'kpi-list').click()
-    #     sleep_timeout_long()
-    #     # TODO: Pagination
-    #     print('Admin Dashboard: Successful ✔')
-    # except Exception as e:
-    #     print('Admin Dashboard: Failed! 👎')
-    #     print(f"Error from Admin Dashboard: {e}")
+    # Dashboard
+    try:
+        # KPI List
+        # wait = WebDriverWait(driver, 20)
+        # element = wait.until(EC.visibility_of_element_located((By.ID, 'radix-:r0:-trigger-password')))
+        # element.click()
+        driver.find_element(By.ID, 'kpi-list').click()
+        sleep_timeout_long()
+        # TODO: Pagination
+        print('Admin Dashboard: Successful ✔')
+    except Exception as e:
+        print('Admin Dashboard: Failed! 👎')
+        print(f"Error from Admin Dashboard: {e}")
 
-    # # KPI
-    # try:
-    #     driver.find_element(By.ID, 'dashboard-kpi-winner').click()
-    #     sleep_timeout_long()
-    #     # Pagination
-    #     # Scroll to the element
-    #     button_element = driver.find_element(By.ID, "next")
-    #     driver.execute_script("arguments[0].scrollIntoView();", button_element)
-    #     button_element.click()
-    #     # driver.find_element(By.ID, 'next').click()
-    #     sleep_timeout_medium()
-    #     driver.find_element(By.ID, 'previous').click()
-    #     sleep_timeout_long()
-    #     # Search By Name
-    #     driver.find_element(By.ID, 'search-input').send_keys('Farhana')
-    #     sleep_timeout_medium()
-    #     act = ActionChains(driver)
-    #     act.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
-    #     sleep_timeout_medium()
-    #     act.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
-    #     sleep_timeout_medium()
-    #     act.key_up(Keys.BACKSPACE).send_keys('Mahmud').key_down(Keys.CONTROL).perform()
-    #     sleep_timeout_medium()
-    #     input_field = driver.find_element(By.ID, 'search-input')
-    #     input_field.clear()
-    #     input_field.send_keys(Keys.BACKSPACE)
-    #     # act.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
-    #     # sleep_timeout_medium()
-    #     # act.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
-    #     # sleep_timeout_medium()
-    #     # act.key_up(Keys.BACKSPACE).send_keys('').key_down(Keys.CONTROL).perform()
-    #     sleep_timeout_long()
-    #     print('Admin KPI: Successful ✔')
-    # except Exception as e:
-    #     print('Admin KPI: Failed! 👎')
-    #     print(f"Error from Admin KPI: {e}")
+    # KPI
+    try:
+        driver.find_element(By.ID, 'dashboard-kpi-winner').click()
+        sleep_timeout_long()
+        # Pagination
+        # Scroll to the element
+        button_element = driver.find_element(By.ID, "next")
+        driver.execute_script("arguments[0].scrollIntoView();", button_element)
+        button_element.click()
+        # driver.find_element(By.ID, 'next').click()
+        sleep_timeout_medium()
+        driver.find_element(By.ID, 'previous').click()
+        sleep_timeout_long()
+        # Search By Name
+        driver.find_element(By.ID, 'search-input').send_keys('Farhana')
+        sleep_timeout_medium()
+        act = ActionChains(driver)
+        act.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
+        sleep_timeout_medium()
+        act.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
+        sleep_timeout_medium()
+        act.key_up(Keys.BACKSPACE).send_keys('Mahmud').key_down(Keys.CONTROL).perform()
+        sleep_timeout_medium()
+        input_field = driver.find_element(By.ID, 'search-input')
+        input_field.clear()
+        input_field.send_keys(Keys.BACKSPACE)
+        # act.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
+        # sleep_timeout_medium()
+        # act.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
+        # sleep_timeout_medium()
+        # act.key_up(Keys.BACKSPACE).send_keys('').key_down(Keys.CONTROL).perform()
+        sleep_timeout_long()
+        print('Admin KPI: Successful ✔')
+    except Exception as e:
+        print('Admin KPI: Failed! 👎')
+        print(f"Error from Admin KPI: {e}")
 
     # Employee
     try:
@@ -269,70 +269,70 @@ def admin(driver, url):
     #     print('Admin Metrics Management: Failed! 👎')
     #     print(f"Error from Admin Metrics Management: {e}")
     #
-    # # KPI Indicator
-    # try:
-    #     driver.find_element(By.ID, 'dashboard-kpi-indicator').click()
-    #     sleep_timeout_long()
-    #     print('Admin KPI Indicator: Successful ✔')
-    # except Exception as e:
-    #     print('Admin KPI Indicator: Failed! 👎')
-    #     print(f"Error from Admin KPI Indicator: {e}")
-    #
-    # # My Profile
-    # try:
-    #     driver.find_element(By.ID, 'avatar').click()
-    #     sleep_timeout_medium()
-    #     driver.find_element(By.ID, 'my-profile').click()
-    #     sleep_timeout_long()
-    #     sleep_timeout_long()
-    #     input_field = driver.find_element(By.ID, 'name')
-    #     input_field.clear()
-    #     input_field.send_keys(Keys.BACKSPACE)
-    #     sleep_timeout_short()
-    #     driver.find_element(By.ID, 'name').send_keys('Bro Hasib')
-    #     sleep_timeout_short()
-    #     input_field = driver.find_element(By.ID, 'phone')
-    #     input_field.clear()
-    #     input_field.send_keys(Keys.BACKSPACE)
-    #     sleep_timeout_short()
-    #     driver.find_element(By.ID, 'phone').send_keys('+8801917200114')
-    #     sleep_timeout_short()
-    #     dropdown = Select(driver.find_element(By.XPATH, '//*[@id="select-supervisor-id"]/select'))
-    #     desired_value = "Tariq Abdullah"
-    #     dropdown.select_by_visible_text(desired_value)
-    #     sleep_timeout_medium()
-    #     driver.find_element(By.ID, 'submit').click()
-    #     sleep_timeout_long()
-    #     print('Admin My Profile: Successful ✔')
-    # except Exception as e:
-    #     print('Admin My Profile: Failed! 👎')
-    #     print(f"Error from Admin My Profile: {e}")
-    #
-    # # Reset Password
-    # try:
-    #     driver.find_element(By.ID, 'avatar').click()
-    #     sleep_timeout_medium()
-    #     driver.find_element(By.ID, 'reset-password').click()
-    #     sleep_timeout_long()
-    #     sleep_timeout_long()
-    #     driver.find_element(By.ID, 'old_password').send_keys('password')
-    #     sleep_timeout_short()
-    #     driver.find_element(By.ID, 'reset-input-password').send_keys('Password')
-    #     sleep_timeout_short()
-    #     driver.find_element(By.ID, 'confirm-password').send_keys('Password')
-    #     sleep_timeout_long()
-    #     driver.find_element(By.ID, 'submit').click()
-    #     sleep_timeout_long()
-    #     driver.find_element(By.ID, 'email').send_keys('hasib@hasib.com')
-    #     sleep_timeout_medium()
-    #     driver.find_element(By.ID, 'password').send_keys('password')
-    #     sleep_timeout_medium()
-    #     driver.find_element(By.ID, 'sign-in').click()
-    #     sleep_timeout_long()
-    #     print('Admin Reset Password: Successful ✔')
-    # except Exception as e:
-    #     print('Admin Reset Password: Failed! 👎')
-    #     print(f"Error from Admin Reset Password: {e}")
+    # KPI Indicator
+    try:
+        driver.find_element(By.ID, 'dashboard-kpi-indicator').click()
+        sleep_timeout_long()
+        print('Admin KPI Indicator: Successful ✔')
+    except Exception as e:
+        print('Admin KPI Indicator: Failed! 👎')
+        print(f"Error from Admin KPI Indicator: {e}")
+
+    # My Profile
+    try:
+        driver.find_element(By.ID, 'avatar').click()
+        sleep_timeout_medium()
+        driver.find_element(By.ID, 'my-profile').click()
+        sleep_timeout_long()
+        sleep_timeout_long()
+        input_field = driver.find_element(By.ID, 'name')
+        input_field.clear()
+        input_field.send_keys(Keys.BACKSPACE)
+        sleep_timeout_short()
+        driver.find_element(By.ID, 'name').send_keys('Bro Hasib')
+        sleep_timeout_short()
+        input_field = driver.find_element(By.ID, 'phone')
+        input_field.clear()
+        input_field.send_keys(Keys.BACKSPACE)
+        sleep_timeout_short()
+        driver.find_element(By.ID, 'phone').send_keys('+8801917200114')
+        sleep_timeout_short()
+        dropdown = Select(driver.find_element(By.XPATH, '//*[@id="select-supervisor-id"]/select'))
+        desired_value = "Tariq Abdullah"
+        dropdown.select_by_visible_text(desired_value)
+        sleep_timeout_medium()
+        driver.find_element(By.ID, 'submit').click()
+        sleep_timeout_long()
+        print('Admin My Profile: Successful ✔')
+    except Exception as e:
+        print('Admin My Profile: Failed! 👎')
+        print(f"Error from Admin My Profile: {e}")
+
+    # Reset Password
+    try:
+        driver.find_element(By.ID, 'avatar').click()
+        sleep_timeout_medium()
+        driver.find_element(By.ID, 'reset-password').click()
+        sleep_timeout_long()
+        sleep_timeout_long()
+        driver.find_element(By.ID, 'old_password').send_keys('password')
+        sleep_timeout_short()
+        driver.find_element(By.ID, 'reset-input-password').send_keys('Password')
+        sleep_timeout_short()
+        driver.find_element(By.ID, 'confirm-password').send_keys('Password')
+        sleep_timeout_long()
+        driver.find_element(By.ID, 'submit').click()
+        sleep_timeout_long()
+        driver.find_element(By.ID, 'email').send_keys('hasib@hasib.com')
+        sleep_timeout_medium()
+        driver.find_element(By.ID, 'password').send_keys('password')
+        sleep_timeout_medium()
+        driver.find_element(By.ID, 'sign-in').click()
+        sleep_timeout_long()
+        print('Admin Reset Password: Successful ✔')
+    except Exception as e:
+        print('Admin Reset Password: Failed! 👎')
+        print(f"Error from Admin Reset Password: {e}")
 
     # Log Out
     try:
