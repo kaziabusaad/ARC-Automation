@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
 from Admin.admin import admin
+from Employee.employee import employee
 from Supervisor.supervisor import supervisor
 
 chromeOptions = Options()
@@ -20,14 +21,14 @@ console = Console(theme=custom_theme)
 driver.get("https://arc-monorepo-arc-web-jkey.vercel.app/")
 driver.maximize_window()
 
-# # Admin
-#
-# try:
-#     admin(driver, "https://arc-monorepo-arc-web-jkey.vercel.app/dashboard")
-#     console.print('Admin: Successful ✔', style='success')
-# except Exception as e:
-#     console.print('Admin: Failed! 👎', style='error')
-#     console.print(f"Error from Admin: {e}")
+# Admin
+
+try:
+    admin(driver, "https://arc-monorepo-arc-web-jkey.vercel.app/dashboard")
+    console.print('Admin: Successful ✔', style='success')
+except Exception as e:
+    console.print('Admin: Failed! 👎', style='error')
+    console.print(f"Error from Admin: {e}")
 
 # Supervisor
 
@@ -37,4 +38,13 @@ try:
 except Exception as e:
     console.print('Supervisor: Failed! 👎', style='error')
     console.print(f"Error from Supervisor: {e}")
+
+# Employee
+
+try:
+    employee(driver, "https://arc-monorepo-arc-web-jkey.vercel.app/dashboard")
+    console.print('Employee: Successful ✔', style='success')
+except Exception as e:
+    console.print('Employee: Failed! 👎', style='error')
+    console.print(f"Error from Employee: {e}")
 
